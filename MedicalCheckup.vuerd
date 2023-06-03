@@ -1,0 +1,66 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [],
+    "indexes": []
+  },
+  "memo": {
+    "memos": [
+      {
+        "value": "23.06.02.(금)     실습 과제\n\n- 이름: Medical Check up\n- ERD 작성 (설계 순서)\n ㆍ유니크 ID (Primary Key) : row 단위\n ㆍcell 단위로 원자화 : Table로 분리\n ㆍ컬럼 내용 중복 피하기\n ㆍ입력 중복 위한 컬럼별 코드화",
+        "ui": {
+          "active": false,
+          "left": 37.600000000000016,
+          "top": 20.8,
+          "zIndex": 13,
+          "width": 234.20000000000007,
+          "height": 124.79999999999997
+        },
+        "id": "24a959eb-a21b-4732-9cff-1b2cf81aa141"
+      }
+    ]
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
