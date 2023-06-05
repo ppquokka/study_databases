@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
-    "zoomLevel": 1,
+    "scrollTop": -198,
+    "scrollLeft": -134,
+    "zoomLevel": 0.7,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -18,7 +18,7 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "",
+    "databaseName": "MedicalCheckup",
     "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "pascalCase",
@@ -41,7 +41,278 @@
     "pluginSerializationMap": {}
   },
   "table": {
-    "tables": [],
+    "tables": [
+      {
+        "name": "MEDICALCHECKUP",
+        "comment": "건강검진",
+        "columns": [
+          {
+            "name": "NAME",
+            "comment": "이름",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "586d7b1c-4728-4197-b78b-d90bb761d572"
+          },
+          {
+            "name": "MAINTAIN",
+            "comment": "유지방향",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.14697265625,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "2272d69f-a8e5-4b0e-a7c7-14da66b13bd8"
+          },
+          {
+            "name": "MECICALCHECKUP_ID",
+            "comment": "UNIQUE_KEY",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 143.58447265625,
+              "widthComment": 85.8017578125,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "e3bf27b2-ef07-40ed-8694-fc1ae1b3df73"
+          },
+          {
+            "name": "GENDER_ID",
+            "comment": "성별_ID",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "2c3aa33d-e034-4085-8701-a9c609d1df79"
+          },
+          {
+            "name": "MEDICALCHECKUP RESULT_ID",
+            "comment": "검진 결과_ID",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 197.5205078125,
+              "widthComment": 77.841796875,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "d32b63dc-c5aa-43a0-9021-21b20eb6e966"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 541,
+          "top": 465,
+          "zIndex": 7,
+          "widthName": 123.3544921875,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "420b3deb-3f1a-44a5-adc7-c0edf9a895d2"
+      },
+      {
+        "name": "GENDER",
+        "comment": "성별",
+        "columns": [
+          {
+            "name": "GENDER_ID",
+            "comment": "성별_ID",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77.84814453125,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "ed838c63-5f30-4630-a94b-9fe3d3e7d0ca"
+          },
+          {
+            "name": "GENDER",
+            "comment": "성별",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "62c4f3f4-6505-4ccf-9649-46ce648fd602"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 13,
+          "top": 496,
+          "zIndex": 3,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "cd5f1d67-cd40-42f9-88f3-3a140d092a44"
+      },
+      {
+        "name": "RESULT",
+        "comment": "건강검진 결과",
+        "columns": [
+          {
+            "name": "MEDICALCHECKUP RESULT",
+            "comment": "검진 결과",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 177.29052734375,
+              "widthComment": 60,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "2ef14011-eb0e-4f7d-8d92-8501d05e4705"
+          },
+          {
+            "name": "MEDICALCHECKUP RESULT_ID",
+            "comment": "검진 결과_ID",
+            "dataType": "VARCHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 197.5205078125,
+              "widthComment": 77.841796875,
+              "widthDataType": 64.6005859375,
+              "widthDefault": 60
+            },
+            "id": "9fce7dc3-44d3-4c37-a976-f00281ba133c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 240,
+          "top": 208,
+          "zIndex": 5,
+          "widthName": 60,
+          "widthComment": 83.61181640625
+        },
+        "visible": true,
+        "id": "fd0d4857-4bef-4930-ba00-fb2883835cae"
+      },
+      {
+        "name": "",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 1033,
+          "top": 477.5555,
+          "zIndex": 4,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "c39b2b30-ee29-4043-93d2-7ca3a922900b"
+      }
+    ],
     "indexes": []
   },
   "memo": {
@@ -50,17 +321,70 @@
         "value": "23.06.02.(금)     실습 과제\n\n- 이름: Medical Check up\n- ERD 작성 (설계 순서)\n ㆍ유니크 ID (Primary Key) : row 단위\n ㆍcell 단위로 원자화 : Table로 분리\n ㆍ컬럼 내용 중복 피하기\n ㆍ입력 중복 위한 컬럼별 코드화",
         "ui": {
           "active": false,
-          "left": 37.600000000000016,
-          "top": 20.8,
-          "zIndex": 13,
-          "width": 234.20000000000007,
-          "height": 124.79999999999997
+          "left": 13.999999999999922,
+          "top": 9.428571428571471,
+          "zIndex": 15,
+          "width": 258,
+          "height": 123
         },
-        "id": "24a959eb-a21b-4732-9cff-1b2cf81aa141"
+        "id": "bbfcd18a-8778-4caf-9a47-388d43b527f2"
       }
     ]
   },
   "relationship": {
-    "relationships": []
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "cd5f1d67-cd40-42f9-88f3-3a140d092a44",
+          "columnIds": [
+            "ed838c63-5f30-4630-a94b-9fe3d3e7d0ca"
+          ],
+          "x": 382.44873046875,
+          "y": 551,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "420b3deb-3f1a-44a5-adc7-c0edf9a895d2",
+          "columnIds": [
+            "2c3aa33d-e034-4085-8701-a9c609d1df79"
+          ],
+          "x": 541,
+          "y": 550.75,
+          "direction": "left"
+        },
+        "constraintName": "fk_gender_to_medicalcheckup",
+        "visible": true,
+        "id": "ffff98d1-477d-4b87-9105-00a66676f554"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "fd0d4857-4bef-4930-ba00-fb2883835cae",
+          "columnIds": [
+            "9fce7dc3-44d3-4c37-a976-f00281ba133c"
+          ],
+          "x": 746.962890625,
+          "y": 263,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "420b3deb-3f1a-44a5-adc7-c0edf9a895d2",
+          "columnIds": [
+            "d32b63dc-c5aa-43a0-9021-21b20eb6e966"
+          ],
+          "x": 798.46142578125,
+          "y": 465,
+          "direction": "top"
+        },
+        "constraintName": "fk_result_to_medicalcheckup",
+        "visible": true,
+        "id": "43ca6694-0026-4c54-b441-dd53d8e20403"
+      }
+    ]
   }
 }
