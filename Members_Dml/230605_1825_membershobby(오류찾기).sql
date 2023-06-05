@@ -1,0 +1,45 @@
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+('H-1', 'M-01');
+
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-2', 'M-01');
+
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-3', 'M-02');
+
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-4', 'M-02');
+
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-3', 'M-03');
+
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-5', 'M-03');
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-6', 'M-04');
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-7', 'M-04');
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-2', 'M-05');
+INSERT INTO members_hobby
+(NOBBY_CODE_ID, MEMBERS_ID)
+VALUES
+( 'H-8', 'M-05');
