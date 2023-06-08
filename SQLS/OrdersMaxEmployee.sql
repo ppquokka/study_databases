@@ -30,16 +30,18 @@ FROM(Oders AS T_OD
     INNER JOIN Oders AS T_OD 
     ON T_sup.
 
-
+-- ERROR   ERROR    ERROR    ERROR    ERROR    ERROR    
 
     -- < 강사님 설명 >
     -- 1. 내가 접근해야하는 TABLE 찾기 : ORDER TABLE의 COLUMN 확인하기
     -- -- EMPOLYEES 와 ORDERS와 JOIN 해서 COUNT 먼저 세기.(데이터 검증)
-SELECT MAX(*), T_INNER.EmployeeID
+SELECT MAX(T_INNER.CNT), T_INNER.EmployeeID, T_INNER.LastName 
 FROM (
-    SELECT count(*), T_EMPS.EmployeeID, T_EMPS.LastName 
+    SELECT count(*) AS CNT, T_EMPS.EmployeeID, T_EMPS.LastName 
     FROM Employees AS T_EMPS
          INNER JOIN Orders AS T_ORDS
          ON T_EMPS.EmployeeID = T_ORDS.EmployeeID
-    GROUP BY T_EMPS.EmployeeID                          -- 검증 완료
-    ) T_INNER
+    GROUP BY T_EMPS.EmployeeID                          -- 얘는 오히려 줄이는 애
+    ) AS T_INNER
+
+
