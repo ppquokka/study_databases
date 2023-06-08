@@ -35,3 +35,5 @@ HAVING COUNT (CATEGORYID) >= 10 ;
 --       13                  3
 --       10                  4
 --       12                  8
+
+SELECT COUNT
