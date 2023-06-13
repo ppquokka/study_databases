@@ -7,8 +7,6 @@ import java.util.Scanner;
 
 import commons.Commons;
 
-
-
 public class CarsWithDB {
     public static void main(String[] args) {
         try {
@@ -31,12 +29,7 @@ public class CarsWithDB {
             while (!workKey.equals("E")) {
                 System.out.print("선택입력 : ");
                 workKey = scanner.nextLine();
-                if (workKey.equals("O")) {                   // DB를 제대로 넣고, return값, parameter 값만 없고, statement와 connection 값은 필요
-                                                                      // 따라서 아무것도 return되지 않은 상황에서 main 스테이트먼드 2개,메인 쿼리 2개 만들고
-                                                                      // 펑션으로 만들기. 펑션으로 넘길땐 파라미터 2개만 넘겨주면 됨. 거기에서 DB 넣다 뺐다 할  수 있음
-                                                                      // 중앙에서 statement 2개, if문 안에서 ???해서 작업분담 하면 충돌 일어나지않음
-                                                                      // 혼자서 실제로 해봐야 이해할 수 있음 (max 1hr)     검증이 더 오래걸림
-                                                                     
+                if (workKey.equals("O")) {
                     //- 차 이름 명단
                     System.out.println("- 차 이름 명단");
                     query = "SELECT T_FAC.COMPANY, T_CAR_INFOR.CAR_NAME\n" + //
@@ -90,23 +83,21 @@ public class CarsWithDB {
                     System.out.println(carNumberMap.get(CarNumber) +", "+carOptionInfor.get(optionNumber));
                     String carPk = carNumberMap.get(CarNumber);
                     String optionPk = carOptionInfor.get(optionNumber);
-                    // delete 옵션 (중복값이 있으면 delete 안됨)
+                    // delete 옵션
                     query = "DELETE FROM `OPTIONS`\n" + //
-                            "WHERE  CAR_INFOR_ID = '"+carPk+"' AND OPTION_INFOR_ID = '"+optionPk+"'";   //prepare statement는 윗 단계
-                    int count = statement.executeUpdate(query); // 쿼리 실행. insert??말고는 update.  count로 이후 인서트할지 업데이트할지 정할 수 있음
-
+                            "WHERE CAR_INFOR_ID = '"+carPk+"' AND OPTION_INFOR_ID ='"+optionPk+"'";
+                    int count = statement.executeUpdate(query);
                     // insert 옵션
                     Commons commons = new Commons();
                     String optionId = commons.generateUUID();
-                    query = "INSERT INTO `options`" + //    
-                            "(OPTION_ID, CAR_INFOR_ID, OPTION_INFOR_ID)" + //
-                            "VALUE"+ //
-                            "('"+optionId+"', '"+carPk+"', '"+optionPk+"')";     // OPTION_ID가 PK이므로 
+                    query = "INSERT INTO `OPTIONS`\n" + //
+                            "(OPTION_ID, CAR_INFOR_ID, OPTION_INFOR_ID)\n" + //
+                            "value\n" + //
+                            "('"+optionId+"', '"+carPk+"', '"+optionPk+"')";
                     count = statement.executeUpdate(query);
-                    
-                    System.out.println();     // 인서트한 카운트 값 및 딜리트 일어났는지 궁금함
 
-                    
+                    System.out.println();
+
                 } else if (workKey.equals("S")) {
                     System.out.println("- 통계 시작 -");
                     query = "SELECT T_FAC.COMPANY, T_CAR_INFOR.CAR_NAME, COUNT(*) AS CNT\n" + //
