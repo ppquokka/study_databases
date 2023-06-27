@@ -30,7 +30,7 @@ public class CarsWithDB {
                 System.out.print("선택입력 : ");
                 workKey = scanner.nextLine();
                 if (workKey.equals("O")) {
-                    //- 차 이름 명단
+                    //- 차 이름 명단     // PollsWithMaethod 팀플에서 '문항 초기화&입력' 해당 줄은 35 ~ 64
                     System.out.println("- 차 이름 명단");
                     query = "SELECT T_FAC.COMPANY, T_CAR_INFOR.CAR_NAME\n" + //
                             "\t, T_CAR_INFOR.CAR_INFOR_ID\n" + //
